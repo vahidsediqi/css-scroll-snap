@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    overflow-y: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none; /* Firefox */
+   -ms-overflow-style: none;  /* IE 10+ */
+}
+
+::-webkit-scrollbar {
+    background: transparent; /* Chrome/Safari/Webkit */
+    width: 0px;
+  }
+
+.side-menu {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 0;
+    margin-left: 35px;
+    list-style: none;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 100%;
+    transition: ease-in-out 0.5;
+    margin-top: 5px;
+}
+
+.dot:hover{
+    background-color: white;
+}
+
+.dot:active{
+    background-color: red;
+}
+.container .section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    background-blend-mode: multiply;
+}
+
+
+.container .section:nth-child(1){
+    background: #f00 url('./bg1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container .section:nth-child(2){
+    background: #0f0 url('./bg2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container .section:nth-child(3){
+    background: #00f url('./bg3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container .section:nth-child(4){
+    background: #f0f url('./bg4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container .section:nth-child(5){
+    background: #00f url('./bg5.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.content {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    max-width: 700px;
+}
+
+h2 {
+    background: #fff;
+    color: #111;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+p {
+    background: #fff;
+    color: #111;
+    padding: 10px 20px;
+    margin-top: 25px;
+}
+/* animations */
